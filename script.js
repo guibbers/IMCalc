@@ -5,25 +5,28 @@ const res = document.querySelector('#res');
 
 calc.addEventListener('click', function(e) {
    e.preventDefault();
-   pesoNumber();
-   alturaNumber();
+   getPeso();
+   getAltura();
    const imc = getIMC();
    const nivel = getNivel();
    res.innerHTML = `Seu IMC é de ${imc} (${nivel})`;
 });
 
-function pesoNumber() {
-   return peso = Number(peso.value);
+function getPeso() {
+   return parseInt(peso.value);
+
 };
 
-function alturaNumber() {
+function getAltura() {
    //Converter centímetros para metros.
-   return altura = Number(altura.value) / 100; 
+   return parseInt(altura.value) / 100; 
 };
 
 function getIMC(){
-    const imc = peso / (altura **2);
-    return imc.toFixed(1);
+   const peso = getPeso();
+   const altura = getAltura();
+   const imc = peso / (altura **2);
+   return imc.toFixed(1);
 };
 
 function getNivel() {
