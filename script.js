@@ -33,11 +33,11 @@ function getNivel() {
   const nivel =  getIMC();
 
    if (nivel <= 18.5) {
-      return 'Abaixo do peso ideal.';
+      return 'Abaixo do peso ideal';
    } else if (nivel >= 18.6 && nivel <= 24.9) {
-      return 'Peso ideal.';
+      return 'Peso ideal';
    } else if (nivel >= 25 && nivel <= 29.9) {
-      return 'Sobrepeso.';
+      return 'Sobrepeso';
    } else if (nivel >= 30 && nivel <= 34.9) {
       return 'Obesidade grau 1';
    } else if (nivel >= 35 && nivel <= 39.9) {
